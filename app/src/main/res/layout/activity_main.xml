@@ -125,15 +125,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         android:text="@string/tap_the_boxes_and_buttons"
         app:layout_constraintBottom_toTopOf="@+id/red_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/label_text"
-        app:layout_constraintTop_toBottomOf="@+id/box_five_text"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toEndOf="@+id/label_text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
