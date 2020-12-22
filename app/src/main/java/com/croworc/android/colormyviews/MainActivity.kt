@@ -4,23 +4,31 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import kotlinx.android.synthetic.main.activity_main.*
+import com.croworc.android.colormyviews.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    // We'll be using View Binding in this app, so we need a variable for the binding object
+    // which will get created in onCreate()
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        setListeners() // sets the OnClickListener for all the boxes
+        // Inflate the layout with a static method of the binding class and assign the returned
+        // binding object reference to the field
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        setListeners() // sets the OnClickListener for all the boxes and the layout itself
     }
 
     private fun setListeners() {
         val clickableViews: List<View> =
-                listOf(box_one_text, box_two_text, box_three_text, box_four_text, box_five_text,
-                    constraint_layout, red_button, yellow_button, green_button)
+                listOf(binding.boxOneText, binding.boxTwoText, binding.boxThreeText,
+                    binding.boxFourText, binding.boxFiveText, binding.constraintLayout,
+                    binding.redButton, binding.yellowButton, binding.greenButton)
 
-        for (item in clickableViews) {
-            item.setOnClickListener { makeColored(it) }
+        clickableViews.forEach { view ->
+            view.setOnClickListener { makeColored(view) }
         }
     }
 
