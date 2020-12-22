@@ -45,5 +45,5 @@ Version: 1
 
 ## License
 
-`MIT license`.
+`Apache license`.
 See: [LICENSE.txt](./LICENSE.txt)
