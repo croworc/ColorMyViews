@@ -16,7 +16,7 @@ not much else.
 
 Android Studio project. Clone or download as ZIP and import into Android Studio.
 
-Targets Android API level 28 (`Pie`), so depending on your installation,
+Compiles against & targets Android API level 30, so depending on your installation,
 you may be prompted to download that SDK version during build.
 
 ## Usage
@@ -46,4 +46,4 @@ Version: 1
 ## License
 
 `MIT license`.
-See: [LICENSE.md](./LICENSE.md)
+See: [LICENSE.txt](./LICENSE.txt)
